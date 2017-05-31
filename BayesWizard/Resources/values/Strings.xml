@@ -24,7 +24,7 @@
   <string name="truePositive">
     Moving on to the true positive.
     \nLet\'s say you are indeed right and</string>
-  <string name="truePositive2">. If you didn\'t already know that</string>
+  <string name="truePositive2">. With that in mind: if you didn\'t already know that</string>
   <string name="truePositive3">, how likely would that seem?</string>
   
   <string-array name="theEvent">
