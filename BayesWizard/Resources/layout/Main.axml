@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar1"
+        android:titleTextColor="#ffffffff" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView1">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_weight="1">
+            <TextView
+                android:text="@string/welcome"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/heading1"
+                style="@style/StandardText" />
+            <TextView
+                android:text="@string/intro"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/subHeading1"
+                style="@style/StandardText"
+                android:layout_below="@id/heading1" />
+            <Button
+                android:text="@string/askBayes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subHeading1"
+                android:id="@+id/askBayes"
+                style="@style/StandardButton"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:text="@string/whatsup"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bubbleLeft"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/whatsup"
+                android:layout_below="@id/askBayes"
+                android:visibility="gone" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bubbleRight"
+                android:layout_alignParentRight="true"
+                android:id="@+id/theAssumption"
+                android:layout_below="@id/whatsup"
+                android:paddingRight="0px"
+                android:visibility="gone" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bubbleLeft"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/withoutTest"
+                android:layout_below="@id/theAssumption"
+                android:visibility="gone" />
+          <TextView
+              android:text=""
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bubbleRight"
+              android:layout_alignParentRight="true"
+              android:id="@+id/priorProbability"
+              android:layout_below="@id/withoutTest"
+              android:visibility="gone" />
+          <TextView
+              android:text=""
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bubbleLeft"
+              android:layout_alignParentLeft="true"
+              android:id="@+id/truePositive"
+              android:layout_below="@id/priorProbability"
+              android:visibility="gone" />
+            <GridLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/probability"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:orientation="horizontal"
+                android:background="@drawable/bubbleright"
+                android:layout_below="@id/truePositive"
+                android:visibility="gone">
+                <EditText
+                    android:text="50"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:textColor="#F80"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/prob1"
+                    android:layout_columnSpan="3"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:inputType="number" />
+                <TextView
+                    android:text="1 %"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/zero1"
+                    android:layout_gravity="center_vertical" />
+                <SeekBar
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seek1"
+                    android:padding="10dp"
+                    android:max="98"
+                    android:progress="49"
+                    android:minHeight="30dp"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_columnWeight="1" />
+                <TextView
+                    android:text="99 %"
+                    android:layout_column="2"
+                    android:layout_row="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nintynine1"
+                    android:layout_gravity="center_vertical" />
+            </GridLayout>
+            <TextView
+                android:text="@string/customizeText"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/customize"
+                style="@style/StandardText"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/probability"
+                android:visibility="gone" />
+            <Button
+                android:text="@string/cont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customize"
+                android:id="@+id/cont1"
+                style="@style/StandardButton"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+                android:textColor="#FF8800"
+                android:padding="10dp"
+                android:visibility="invisible"
+                android:cursorVisible="true"
+                android:singleLine="true"
+                android:layout_below="@id/cont1" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

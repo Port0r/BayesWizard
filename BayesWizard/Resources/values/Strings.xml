@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="posterior">The posterior probability</string>
+  <string name="welcome">Welcome to Bayes\' Wizard</string>
+  <string name="intro">Here we are all about the difference between the probability of test results vs actual events.
+    All tests are flawed and we have to take that into account.
+    \n\nSpeaking in an abstract way, you assume that some event took place, because some test told you so.
+    \n\nLet\'s see about that!
+  </string>
+  <string name="askBayes">Ask Bayes!</string>
+  <string name="customizeText">Customize the colored bits, then continue.</string>
+  <string name="cont">Continue</string>
+
+  <string name="whatsup">Hey, Beyes here.\nWhat seems to be the problem?</string>
+  <string name="Iassume">I assume that</string>
+  <string name="because">, because</string>
+  <string name="withoutTest1">Hmm, let\'s start with the prior probability.
+    \nBefore you knew that</string>
+  <string name="withoutTest2">, what was the general probability that</string>
+  <string name="withoutTest3">to begin with?</string>
+
+  <string name="withoutTestAnswer">There was always a</string>
+  <string name="withoutTestAnswer2">% chance that</string>
+  <string name="truePositive">
+    Moving on to the true positive.
+    \nLet\'s say you are indeed right and</string>
+  <string name="truePositive2">. If you didn\'t already know that</string>
+  <string name="truePositive3">, how likely would that seem?</string>
+  
+  <string-array name="theEvent">
+    <item >my friend is pregnant</item>
+    <item >my uncle has cancer</item>
+    <item >Lisa hates me</item>
+    <item >Alex is a mathematician</item>
+  </string-array>
+  <string-array name="theTest">
+    <item >the test is positive</item>
+    <item >the test is positive</item>
+    <item >she won\'t come to my party</item>
+    <item >he is shy</item>
+  </string-array>
+</resources>
